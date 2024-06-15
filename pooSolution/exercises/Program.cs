@@ -10,6 +10,7 @@ namespace exercises
             Ejercicio1();
             Ejercicio2();
             Ejercicio3();
+            Ejercicio4();
         }
 
         // ejercicio 1
@@ -75,6 +76,33 @@ namespace exercises
             Console.WriteLine(Priskaa.Explicar());
 
         
+        }
+
+
+        public static void Ejercicio4()
+        {
+            MagicCharacter PriskaCharacter = new MagicCharacter("Priscila", 120, 52, 80);
+            AgilityCharacter PriskalCharacter = new AgilityCharacter("Priska", 180, 70, 90);
+            StrengthCharacter PriskiCharacter = new StrengthCharacter("Priski", 74, 82, 98);
+
+
+            Enemy PriskaEnemy = new Enemy(200, 50);
+
+            Console.WriteLine(PriskaCharacter.Atacar());
+            Console.WriteLine(PriskaCharacter.MoveX());
+            Console.WriteLine(PriskaCharacter.MoveY());
+            Console.WriteLine(PriskaEnemy.MoveX());
+            Console.WriteLine(PriskaEnemy.MoveY());
+
+            List<Character> characters = new List<Character>();
+
+            characters.Add(PriskaCharacter);
+            characters.Add(PriskalCharacter);
+            characters.Add(PriskiCharacter);
+
+            Turn.Attack(characters); // ejecuta clase estatica pasando x parametro lista de personajes ( characters)
+
+
         }
 
 
