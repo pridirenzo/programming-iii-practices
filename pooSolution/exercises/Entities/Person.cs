@@ -10,16 +10,34 @@ namespace exercises
     {
 
         public string Name { get; set; }
+        public int Age { get; set; }
 
         // constructor
-        public Person(string name)
+        public Person(string name, int age)
         {
             Name = name;
+            Age = age;
         }
 
         public string Introduce()
         {
-            return $"Hola, mi nombre es {Name}!";
+           return $"Hola, mi nombre es {Name}!";
+        }
+
+        public string Saludar()
+        {
+            return "Hola!";
+        }
+
+        public void SetEdad(int age)
+        {
+            Age = age;
+    
+        }
+
+        public string MostrarEdad()
+        {
+            return $"Mi edad es: {Age}";
         }
 
 

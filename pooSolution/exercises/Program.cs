@@ -9,6 +9,7 @@ namespace exercises
         {
             Ejercicio1();
             Ejercicio2();
+            Ejercicio3();
         }
 
         // ejercicio 1
@@ -23,9 +24,9 @@ namespace exercises
 
             List<Person> people = new List<Person>();
 
-            people.Add(new Person(name1));
-            people.Add(new Person(name2));
-            people.Add(new Person(name3));
+            people.Add(new Person(name1, 20));
+            people.Add(new Person(name2, 30));
+            people.Add(new Person(name3, 40));
 
             foreach (Person person in people)
             {
@@ -35,7 +36,7 @@ namespace exercises
 
         // ejercicio 2
 
-            public static void Ejercicio2()
+        public static void Ejercicio2()
         {
             PhotoBook book = new PhotoBook();
 
@@ -50,6 +51,30 @@ namespace exercises
             Console.WriteLine($"La cantidad de paginas es {bigBook.GetTotalPages()}");
 
 
+        }
+
+
+        // ejercicio 3
+
+        public static void Ejercicio3()
+        {
+            // persona
+            Person Priska = new Person("Priscila", 20);
+            Console.WriteLine(Priska.Saludar());
+
+            // estudiante
+            Student Priscilita = new Student("Priskita", 20);
+            Console.WriteLine(Priscilita.Saludar());
+            Priscilita.SetEdad(20);
+            Console.WriteLine(Priscilita.MostrarEdad());
+
+            // profesor
+            Teacher Priskaa = new Teacher("Priska", 20);
+            Console.WriteLine(Priskaa.Saludar());
+            Priskaa.SetEdad(20);
+            Console.WriteLine(Priskaa.Explicar());
+
+        
         }
 
 
