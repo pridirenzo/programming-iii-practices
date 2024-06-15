@@ -11,6 +11,7 @@ namespace exercises
             Ejercicio2();
             Ejercicio3();
             Ejercicio4();
+            Ejercicio5();
         }
 
         // ejercicio 1
@@ -78,7 +79,7 @@ namespace exercises
         
         }
 
-
+        // ejercicio 4
         public static void Ejercicio4()
         {
             MagicCharacter PriskaCharacter = new MagicCharacter("Priscila", 120, 52, 80);
@@ -103,6 +104,20 @@ namespace exercises
             Turn.Attack(characters); // ejecuta clase estatica pasando x parametro lista de personajes ( characters)
 
 
+        }
+
+
+        // ejercicio 5
+
+        public static void Ejercicio5()
+        {
+            Car car = new Car(0);
+
+            Console.WriteLine("Ingrese cantidad de combustible: ");
+            string comb = Console.ReadLine();
+            int realComb = int.Parse(comb);
+            car.CargarCombustible(realComb);
+            car.Conducir();
         }
 
 
