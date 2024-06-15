@@ -15,6 +15,10 @@ namespace Program
             Ejercicio4();
             Ejercicio5();
             Ejercicio6();
+            Ejercicio7();
+            Ejercicio8();
+            Ejercicio9();
+            Ejercicio10();
         }
 
 
@@ -134,6 +138,68 @@ namespace Program
 
         }
 
+        public static void Ejercicio7()
+        {
+            for (int x = 0; x <= 100; x++)
+            {
+                Console.WriteLine(x);
+            }
+
+
+        }
+
+        public static void Ejercicio8()
+        {
+            int x = 0;
+            while (x <= 100)
+            {
+                Console.WriteLine(x);
+            }
+        }
+
+        public static void Ejercicio9()
+        {
+            for (int x = 0; x <= 100; x++)
+            {
+                if (x % 2 == 0)
+                {
+                    Console.WriteLine(x);
+                }
+            }
+        }
+
+        public static void Ejercicio10()
+        {
+            List<int> evenNumbers = new List<int>();
+            List<int> dividedByThree = new List<int>();
+
+            for (int x = 0; x <= 100; x++)
+            {
+                if (x % 2 == 0)
+                {
+                    evenNumbers.Add(x);
+                }
+                else if (x % 3 == 0)
+                {
+                    dividedByThree.Add(x);
+                }
+
+            }
+
+            Console.WriteLine("Numeros pares: ");
+            for (int i = 0; i <= evenNumbers.Count; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("Numeros divisibles por 3: ");
+            for (int k = 0; k <= dividedByThree.Count; k++)
+            {
+                Console.WriteLine(k);
+
+            }
+
+        }
 
     }
 }
