@@ -14,6 +14,7 @@ namespace Program
             Ejercicio3();
             Ejercicio4();
             Ejercicio5();
+            Ejercicio6();
         }
 
 
@@ -39,7 +40,7 @@ namespace Program
             Console.WriteLine($"Hola {name}, bienvenido a {city} ");
 
         }
-        
+
 
         public static void Ejercicio3()
         {
@@ -108,10 +109,32 @@ namespace Program
             {
                 Console.WriteLine("Error, ingrese un día valido");
             }
-                  
+
+        }
+
+
+        public static void Ejercicio6()
+        {
+
+            Console.WriteLine("Ingrese precio de producto: ");
+            string price = Console.ReadLine();
+            double floatPrice = double.Parse(price);
+            Console.WriteLine("Ingrese medio de pago: 1-EFECTIVO, 2-TARJETA");
+            string paymentMethod = Console.ReadLine();
+            int paymentNumber = int.Parse(paymentMethod);
+            Console.WriteLine("Ingrese num de tarjeta: ");
+            string num = Console.ReadLine();
+            // precio final
+            floatPrice = floatPrice + (floatPrice * 0.10);
+
+            if (num.Length == 16)
+            {
+                Console.WriteLine($"Precio final a pagar: {floatPrice}");
             }
+
         }
 
 
     }
+}
   
