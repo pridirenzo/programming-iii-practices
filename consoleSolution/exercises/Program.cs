@@ -13,6 +13,7 @@ namespace Program
             Ejercicio2();
             Ejercicio3();
             Ejercicio4();
+            Ejercicio5();
         }
 
 
@@ -65,6 +66,52 @@ namespace Program
             Console.WriteLine(Math.Max(inputX, inputY));
         }
 
+
+        public static void Ejercicio5()
+        {
+            Console.WriteLine("Ingrese día: ");
+            string day = Console.ReadLine();
+
+            if (day.Contains("lunes", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("No es fin de semana");
+            }
+            else if (day.Contains("martes", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("No es fin de semana");
+            }
+            else if (day.Contains("miercoles", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("No es fin de semana");
+            }
+
+            else if (day.Contains("jueves", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("No es fin de semana");
+            }
+
+            else if (day.Contains("viernes", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("No es fin de semana");
+            }
+
+            else if (day.Contains("sabado", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Fin de semana");
+            }
+
+            else if (day.Contains("domingo", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Fin de semana");
+            }
+            else
+            {
+                Console.WriteLine("Error, ingrese un día valido");
+            }
+                  
+            }
+        }
+
+
     }
-   
-}
+  
