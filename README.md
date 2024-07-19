@@ -1,4 +1,3 @@
-# practicas-PIII
-## practicas de PIII [UTN] - 2024
-- 1 solución con proyecto de tipo consola (pooSolution)
-- 1 solución con proyecto de tipo consola y proyecto de tipo WebApi (consoleSolution) 
+# Programming III practices
+- 1 solution with a console app project (pooSolution)
+- 1 solution with a console app project and a ASP.NET CORE Web API project (consoleSolution) 
