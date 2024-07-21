@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Application.Services;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,7 @@ namespace PriskitaWebApi.Controllers
 
 
         [HttpGet("[Action]")]
-        public IActionResult GetById(int id)
+        public IActionResult Get(int id)
         {
             return Ok(_reviewService.GetById(id));
         }
@@ -32,7 +33,7 @@ namespace PriskitaWebApi.Controllers
         }
 
 
-        [HttpDelete("[Action]")]
+        [HttpDelete("[Action]/{id}")]
         public IActionResult Delete(int id)
         {
             _reviewService.Delete(id);
@@ -49,7 +50,10 @@ namespace PriskitaWebApi.Controllers
         [HttpPost("[Action]")]
         public IActionResult Add(Review review)
         {
-            return Ok(_reviewService.Add(review));
+            var createdReview = _reviewService.Add(review); // devuelvo 201 creado con exito
+
+            return CreatedAtAction(nameof(Get), new { Id = createdReview.Id }, createdReview);
+
         }
 
 

@@ -33,13 +33,15 @@ namespace Infrastructure.Data.Repositories
 
         public void Delete(int id)
         {
-            _context.Remove(id);
+            var obj = _context.Videogames.FirstOrDefault(x => x.Id == id);
+            _context.Remove(obj);
             _context.SaveChanges();
         }
 
         public void Update(int id)
         {
-            _context.Update(id);
+            var obj = _context.Videogames.FirstOrDefault(x => x.Id == id);
+            _context.Update(obj);
             _context.SaveChanges();
         }
 

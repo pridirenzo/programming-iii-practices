@@ -21,7 +21,8 @@ namespace Infrastructure.Data.Repositories
 
         public void Delete(int id)
         {
-            _context.Remove(id);
+            var obj = _context.Reviews.FirstOrDefault(x => x.Id == id);
+            _context.Remove(obj);
             _context.SaveChanges();
         }
         public Review? GetById(int id)
@@ -41,7 +42,8 @@ namespace Infrastructure.Data.Repositories
 
         public void Update(int id)
         {
-            _context.Update(id);
+            var obj = _context.Reviews.FirstOrDefault(x => x.Id == id);
+            _context.Update(obj);
             _context.SaveChanges();
         }
 
