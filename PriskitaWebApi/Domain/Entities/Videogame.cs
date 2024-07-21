@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 namespace Domain.Entities
 {
@@ -9,9 +10,12 @@ namespace Domain.Entities
 
         public string Name { get; set; }
 
+        [Key]
         public int Id { get; set; }
 
         public string Rating { get; set; }
+
+        public string Description { get; set; }
 
         public IList<Review> Reviews = new List<Review>();
     }
